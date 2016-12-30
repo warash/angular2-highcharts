@@ -33,7 +33,7 @@ export class ChartComponent {
     element: ElementRef;
     highchartsService : HighchartsService;
     private userOpts: any;
-    private baseOpts: any;
+
     @Input() type: string = 'Chart';
     @Input() set options(opts : highcharts.Options) {
         this.userOpts = opts;
@@ -41,15 +41,18 @@ export class ChartComponent {
     };
 
     private init() {
-        if (this.userOpts && this.baseOpts) {
-            this.chart = initChart(this.highchartsService, this.userOpts, this.baseOpts, this.type);
+        if (this.userOpts) {
+            this.chart = initChart(this.highchartsService, this.userOpts, this.getBaseOptions(), this.type);
             this.create.emit(this.chart);
         }
     }
 
     ngAfterViewInit() {
-        this.baseOpts = createBaseOpts(this, this.series, this.series ? this.series.point : null, this.xAxis, this.yAxis, this.element.nativeElement);
         this.init();
+    }
+
+    getBaseOptions(){
+        return createBaseOpts(this, this.series, this.series ? this.series.point : null, this.xAxis, this.yAxis, this.element.nativeElement);
     }
 
     constructor(element: ElementRef, highchartsService : HighchartsService) {

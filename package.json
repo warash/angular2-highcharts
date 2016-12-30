@@ -1,5 +1,5 @@
 {
-  "name": "angular2-highcharts",
+  "name": "@majewski/angular2-highcharts",
   "version": "0.4.1",
   "description": "Highcharts for your Angular2 project",
   "scripts": {

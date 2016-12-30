@@ -24,10 +24,29 @@ export declare class ChartComponent {
     element: ElementRef;
     highchartsService: HighchartsService;
     private userOpts;
-    private baseOpts;
     type: string;
     options: highcharts.Options;
     private init();
     ngAfterViewInit(): void;
+    getBaseOptions(): {
+        chart: {
+            renderTo: any;
+            events: {};
+        };
+        plotOptions: {
+            series: {
+                events: {};
+                point: {
+                    events: {};
+                };
+            };
+        };
+        xAxis: {
+            events: {};
+        };
+        yAxis: {
+            events: {};
+        };
+    };
     constructor(element: ElementRef, highchartsService: HighchartsService);
 }
