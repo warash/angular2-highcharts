@@ -1,6 +1,6 @@
 {
-  "name": "@majewski/angular2-highcharts",
-  "version": "0.4.2",
+  "name": "mm-angular2-highcharts",
+  "version": "1.0.0",
   "description": "Highcharts for your Angular2 project",
   "scripts": {
     "watch": "ntsc -w",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gevgeny/angular2-highcharts"
+    "url": "https://github.com/warash/angular2-highcharts"
   },
   "keywords": [
     "Angular2",
@@ -21,10 +21,7 @@
   ],
   "author": "Eugene Gluhotorenko",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gevgeny/angular2-highcharts/issues"
-  },
-  "homepage": "https://github.com/gevgeny/angular2-highcharts#readme",
+  "homepage": "https://github.com/warash/angular2-highcharts",
   "devDependencies": {
     "@angular/common": "^2.1.1",
     "@angular/compiler": "^2.1.1",
@@ -50,6 +47,6 @@
   },
   "dependencies": {
     "@types/highcharts": "^4.2.36",
-    "highcharts": "^5.0.2"
+    "highcharts": "^5.0.6"
   }
 }
